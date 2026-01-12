@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 
 export default defineConfig({
-  base: "/my-portfolio-frontend/", 
+  // base: "/my-portfolio-frontend/", 
 
   plugins: [react()],
   resolve: {
@@ -17,6 +17,8 @@ export default defineConfig({
       '@types': path.resolve(__dirname, './src/types'),
       '@utils': path.resolve(__dirname, './src/utils'),
       '@constants': path.resolve(__dirname, './src/constants'),
+      '@shared': path.resolve(__dirname, './src/shared'),
+      '@presentation': path.resolve(__dirname, './src/presentation'),
     },
   },
   server: {

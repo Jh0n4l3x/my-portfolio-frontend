@@ -1,7 +1,7 @@
 export interface User {
   id: string;
   email: string;
-  username: string; // Username para la URL del portafolio
+  username: string;
   firstName?: string;
   lastName?: string;
   role: 'USER' | 'ADMIN';

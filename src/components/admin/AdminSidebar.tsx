@@ -71,7 +71,7 @@ export function AdminSidebar() {
       icon: <FileText size={20} />,
       children: [
         { name: 'Posts', path: '/admin/blog', icon: <FileText size={18} /> },
-        { name: 'Tags', path: '/admin/tags', icon: <Tag size={18} /> },
+        { name: 'Tags', path: '/admin/blog/tags', icon: <Tag size={18} /> },
         { name: 'Nuevo Post', path: '/admin/blog/new', icon: <PlusCircle size={18} /> },
       ],
     },
@@ -85,15 +85,9 @@ export function AdminSidebar() {
       path: '/admin/messages',
       icon: <MessageSquare size={20} />,
     },
-    {
-      name: 'Skills',
-      path: '/admin/skills',
-      icon: <TrendingUp size={20} />,
-    },
   ];
 
-  // Agregar sección de tecnologías y administración solo para admins
-  if (isAdmin) {
+if (!isAdmin) {
     navItems.push({
       name: 'Tecnologías',
       path: '/admin/technologies',
@@ -104,9 +98,13 @@ export function AdminSidebar() {
       path: '/admin/users',
       icon: <Users size={20} />,
     });
+    navItems.push({
+      name: 'Skills',
+      path: '/admin/skills',
+      icon: <TrendingUp size={20} />,
+    });
+    
   }
-
-  // Agregar configuración de seguridad al final para todos los usuarios
   navItems.push({
     name: 'Configuración',
     path: '/admin/security',

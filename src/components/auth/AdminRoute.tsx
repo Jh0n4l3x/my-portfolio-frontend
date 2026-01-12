@@ -17,7 +17,7 @@ export function AdminRoute({ children }: AdminRouteProps) {
   }));
 
   // Si no está autenticado, redirigir al login
-  if (!isAuthenticated && !authService.isAuthenticated()) {
+  if (!isAuthenticated) {
     return <Navigate to="/login" replace />;
   }
 
