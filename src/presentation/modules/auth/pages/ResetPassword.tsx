@@ -1,4 +1,4 @@
-﻿import { WorkInProgress } from '@components/ui/WorkInProgress';
+﻿import { WorkInProgress } from "@/presentation/components/feedback/WorkInProgress";
 
 export function ResetPassword() {
   return (

@@ -1,10 +1,10 @@
-import { useAuthStore } from '@store/authStore';
-import { useLogout } from '@hooks/useAuth';
 import { LogOut, Bell, Search, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { profileService } from '@services/profile.service';
 import { Profile } from '@/shared/types';
+import { profileService } from '@/infrastructure/adapters/service/profile.service';
+import { useAuthStore } from '@/shared/store';
+import { useLogout } from '@/presentation/hooks/useAuth';
 
 
 export function AdminHeader() {

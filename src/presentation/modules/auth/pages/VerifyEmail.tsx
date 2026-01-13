@@ -1,4 +1,4 @@
-import { authService } from '@/services/auth.service';
+import { authService } from '@/infrastructure/adapters/service/auth.service';
 import { useAuthStore } from '@/shared/store';
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';

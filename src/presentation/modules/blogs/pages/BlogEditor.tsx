@@ -1,7 +1,7 @@
+import { blogService, CreatePostDto } from '@/infrastructure/adapters/service/blog.service';
+import { Tag, tagService } from '@/infrastructure/adapters/service/tag.service';
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { blogService, Post, CreatePostDto } from '@services/blog.service';
-import { tagService, Tag } from '@services/tag.service';
 
 export const BlogEditor: React.FC = () => {
   const { id } = useParams<{ id: string }>();

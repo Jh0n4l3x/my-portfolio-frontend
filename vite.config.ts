@@ -9,16 +9,14 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
-      '@components': path.resolve(__dirname, './src/components'),
-      '@pages': path.resolve(__dirname, './src/pages'),
-      '@hooks': path.resolve(__dirname, './src/hooks'),
-      '@services': path.resolve(__dirname, './src/services'),
-      '@store': path.resolve(__dirname, './src/store'),
-      '@types': path.resolve(__dirname, './src/types'),
-      '@utils': path.resolve(__dirname, './src/utils'),
-      '@constants': path.resolve(__dirname, './src/constants'),
       '@shared': path.resolve(__dirname, './src/shared'),
       '@presentation': path.resolve(__dirname, './src/presentation'),
+      '@application': path.resolve(__dirname, './src/application'),
+      '@domain': path.resolve(__dirname, './src/domain'),
+      '@infrastructure': path.resolve(__dirname, './src/infrastructure'),
+      '@service': path.resolve(__dirname, './src/infrastructure/adapters/service'),
+      '@repository': path.resolve(__dirname, './src/infrastructure/adapters/repository'),
+      '@components': path.resolve(__dirname, './src/presentation/components'),
     },
   },
   server: {

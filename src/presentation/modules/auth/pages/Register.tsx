@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Lock, User, UserCircle, Check, X, ArrowLeft } from 'lucide-react';
-import { useInitiateRegistration, useCompleteRegistration } from '@hooks/useAuth';
-import { useCheckUsername, useCheckEmail, useCheckPhone } from '@hooks/usePortfolio';
-import { PhoneInput } from '@components/ui/PhoneInput';
+import { useCompleteRegistration, useInitiateRegistration } from '@/presentation/hooks/useAuth';
+import { useCheckEmail, useCheckPhone, useCheckUsername } from '@/presentation/hooks/usePortfolio';
+import { PhoneInput } from '@/presentation/components/feedback/PhoneInput';
 
 export function Register() {
   const [step, setStep] = useState<'form' | 'verification'>('form');

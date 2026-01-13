@@ -1,5 +1,5 @@
-import { blogService, Post } from '@/services/blog.service';
-import { Tag, tagService } from '@/services/tag.service';
+import { blogService, Post } from '@/infrastructure/adapters/service/blog.service';
+import { Tag, tagService } from '@/infrastructure/adapters/service/tag.service';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
